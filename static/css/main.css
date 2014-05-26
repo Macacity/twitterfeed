@@ -1,0 +1,38 @@
+
+
+.content {
+    width:75%;
+    margin: 10% auto;
+}
+
+.body {
+        background-color: 
+        #F0F0F0;
+    border-width: 
+        1px;
+
+    border-radius: 
+        15px;
+    width: 350px;
+    height: 200px;
+    margin:auto;
+    margin-top: 
+        200px;
+    padding:10px;
+}
+
+#title {
+    margin-bottom: 
+        10px;
+    font-size: 
+        20px;
+    
+}
+
+.button {
+    text-align: 
+        right;
+    margin-top: 
+        5px;
+}
+

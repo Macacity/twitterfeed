@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Twitter to RSS</title>
+	<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type="text/css">
+	
+	
+	
+</head>
+<body>
+    <div class="body">
+        <div class="content">
+            <div id="title">
+                Twitter to RSS
+            </div>
+            <div id="form">
+                <form action="?" method="get">
+                    <div class="user">
+                        <label for="user">Twittername:</label>
+                        <input type="text" id="user" name="user" required>
+                    </div>
+                    <div class="link">
+                        <label for="link" >Just Tweets with links:</label>
+                        <input type="checkbox" id="link" name="link" value="1">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Show RSS Feed">
+                    </div>
+                </form>
+            </div>
+            
+        
+        </div>
+    
+    </div>
+</body>
+    
+</html>
