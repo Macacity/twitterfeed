@@ -68,11 +68,17 @@ def make_rss(user, link=False):
         fe.guid(statusurl)
         fe.pubdate(status.created_at)
 
+        fe.link(href=statusurl, rel='alternate')
+
         if link:
-            fe.link(href=status.urls[0].expanded_url, rel='alternate')
-            fe.summary(status.GetText() + '\n' + status.urls[0].expanded_url)
+            #fe.link(href=status.urls[0].expanded_url, rel='alternate')
+            urlsummary = '<br/> <ul>'
+            for url in status.urls:
+                urlsummary += '<a href="{0}">{0}</a> <br/>'.format(url.expanded_url)
+            urlsummary += '</ul>'
+            fe.summary(status.GetText() + '\n' + urlsummary)
         else:
-            fe.link(href=statusurl, rel='alternate')
+
             fe.summary(status.GetText())
 
     fg.rss_file(filename)
